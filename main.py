@@ -1,5 +1,7 @@
 import logging
 
+from dotenv import load_dotenv
+
 from src.constants import (
     DATE_END,
     DATE_START,
@@ -12,6 +14,7 @@ from src.prices import CryptoPrices, ForexPrices, OptionPrices, StockPrices
 from src.utils import setup_logging, to_timestamp
 
 if __name__ == "__main__":
+    load_dotenv()
     logger = setup_logging(console_level=logging.INFO, file_level=logging.DEBUG)
 
     date_start = to_timestamp(DATE_START)

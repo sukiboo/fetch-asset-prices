@@ -1,6 +1,7 @@
 tmp*
 files/
-__pycache__/
+.env
+!.env.example
 *.pyc
 *.pyo
 *.log

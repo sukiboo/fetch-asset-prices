@@ -22,10 +22,13 @@ This is the input for the [`adjust-asset-prices`](https://github.com/sukiboo/adj
    pip install -r requirements.txt
    ```
 
-3. Set Massive API credentials:
+3. Set Massive API credentials by copying `.env.example` to `.env` and filling in
+   the values (the `.env` file is gitignored and loaded automatically on startup):
    ```bash
-   export MASSIVE_API_KEY=your_api_key_here
-   export MASSIVE_AWS_ACCESS_KEY_ID=your_aws_access_key_id_here
+   cp .env.example .env
+   # then edit .env:
+   #   MASSIVE_API_KEY=your_api_key_here              # AWS secret access key
+   #   MASSIVE_AWS_ACCESS_KEY_ID=your_access_key_id   # AWS access key id
    ```
 
 4. Configure retrieval parameters in `src/constants.py`:
