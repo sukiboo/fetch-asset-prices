@@ -1,4 +1,4 @@
-# 🗃️ Historical Asset Prices 🗃️
+# 🗃️ Fetch Asset Prices 🗃️
 
 A Python script to retrieve historical price files for stocks, options, crypto, and forex at minute intervals using the [~~Polygon.io~~ Massive](https://github.com/massive-com/client-python) library.
 
@@ -6,6 +6,8 @@ A Python script to retrieve historical price files for stocks, options, crypto, 
 
 This repository downloads raw minute-level price data files from S3 containing all tickers. Files are stored locally in `files/{asset_type}/` directory.
 Note that the data contains raw historical prices that are not adjusted for inflation, dividends, stock splits, etc.
+
+This is the input for the [`adjust-asset-prices`](https://github.com/sukiboo/adjust-asset-prices) repo.
 
 ## Setup
 
@@ -114,3 +116,5 @@ All prices are retrieved via [Minute Aggregates Flat Files REST API](https://mas
 - **Forex**: [Forex Minute Aggregates](https://massive.com/docs/flat-files/forex/minute-aggregates)
 
 ✨ [Pre-2026 data](https://www.dropbox.com/scl/fo/xd5a5s5cwa0imf6gvplzv/AL1ffzRw3_AEfeEwRoKLQms?rlkey=ah6c8ps5zvco29npoeoro831k&st=zd6g4y7x&dl=0) ✨ -- all available daily files for all assets up to 2026 🎉
+
+Note that these files contain raw historical data; in order to adjust for gaps, splits, and dividends, use [`adjust-asset-prices`](https://github.com/sukiboo/adjust-asset-prices).
